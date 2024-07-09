@@ -103,9 +103,9 @@ class MirrorMirrorOnTheWall(unittest.TestCase):
             'W4904',  # deprecated-class
             'W0614',  # unused-wildcard-import
 
-            # Enable asap. This list is selection of existing (not all!)
-            # problems currently exiting in the BIT code base. Quit easy to fix
-            # because there count is low.
+            # Enable asap. This list is a selection of existing (not all!)
+            # problems currently existing in the BIT code base. Quite easy to fix
+            # because their count is low.
             # 'R0801',  # duplicate-code
             # 'W0123',  # eval-used
             # 'W0237',  # arguments-renamed
