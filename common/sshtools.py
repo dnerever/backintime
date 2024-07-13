@@ -568,16 +568,17 @@ class SSH(MountControl):
 
             print('%s%s:%s' % (bcolors.BOLD, cipher, bcolors.ENDC))
 
-            # scp uses -P instead of -p for port
-            subprocess.call([
-                'scp',
-                '-P',
-                str(self.port),
-                '-c',
-                cipher,
-                temp,
-                self.user_host_path
-            ])
+            for i in range(2):
+                # scp uses -P instead of -p for port
+                subprocess.call([
+                    'scp',
+                    '-P',
+                    str(self.port),
+                    '-c',
+                    cipher,
+                    temp,
+                    self.user_host_path
+                ])
 
         ssh = self.config.sshCommand(
             cmd=['rm', os.path.join(self.path, os.path.basename(temp))],
