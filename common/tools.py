@@ -28,7 +28,6 @@ import errno
 import gzip
 import locale
 import gettext
-from collections.abc import MutableSet
 import hashlib
 import ipaddress
 import atexit
